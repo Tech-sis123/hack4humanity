@@ -1,0 +1,54 @@
+/* Layout Styles */
+.app-layout {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+}
+
+.main-content.full-width {
+  margin-left: 0;
+  padding: 0;
+}
+
+.main-content.with-sidebar {
+  margin-left: 280px;
+  padding: 20px 30px;
+}
+
+.main-content.with-bottom-nav {
+  padding-bottom: 90px;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content.with-sidebar {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .main-content.with-bottom-nav {
+    padding-bottom: 80px;
+  }
+}

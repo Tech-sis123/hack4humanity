@@ -1,0 +1,83 @@
+.blockchain-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: var(--badge-bg, var(--primary-bg));
+  color: var(--badge-color, var(--primary-color));
+  border: 2px solid var(--badge-color, var(--primary-color));
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blockchain-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.blockchain-badge.small {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.blockchain-badge.large {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+.badge-icon {
+  font-size: 1.1em;
+}
+
+.badge-label {
+  white-space: nowrap;
+}
+
+/* Status-specific styles */
+.blockchain-badge.verified {
+  --badge-color: var(--blockchain-verified);
+  --badge-bg: var(--success-bg);
+  border-color: var(--blockchain-verified);
+  animation: pulse 2s infinite;
+}
+
+.blockchain-badge.pending {
+  --badge-color: var(--blockchain-pending);
+  --badge-bg: var(--warning-bg);
+  border-color: var(--blockchain-pending);
+}
+
+.blockchain-badge.failed {
+  --badge-color: var(--blockchain-failed);
+  --badge-bg: var(--error-bg);
+  border-color: var(--blockchain-failed);
+}
+
+/* Pulse animation for verified status */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Prominent blockchain badge for key areas */
+.blockchain-badge.prominent {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blockchain-badge.prominent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
