@@ -200,4 +200,16 @@ const Login = () => {
             <div className="auth-footer">
               <p>
                 Don't have an account?{' '}
-                <Link to="/register" class
+                <Link to="/register" className="auth-link">
+                  Sign up for free
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
